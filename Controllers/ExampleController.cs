@@ -13,11 +13,11 @@ namespace TestApi.Controllers
         public int CountInstances = 0;
 
         public ExampleController() {
-            // People = new List<Person>();
-            // People.Add(new Person("Jason", "007", 700));
-            // People.Add(new Person("James", "008", 77));
-            // People.Add(new Person("Maxwell", "86", 60));
-            // People.Add(new Person("Agent", "99", 50));
+            People = new List<Person>();
+            People.Add(new Person("Jason", "007", 700));
+            People.Add(new Person("James", "008", 77));
+            People.Add(new Person("Maxwell", "86", 60));
+            People.Add(new Person("Agent", "99", 50));
 
             StaticCountInstances++;
             this.CountInstances++;
@@ -34,7 +34,7 @@ namespace TestApi.Controllers
             return StaticCountInstances;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("id string")]
         public Person GetPerson(string id) {
             Person found = null;
 
@@ -48,10 +48,29 @@ namespace TestApi.Controllers
             return found;
         }
 
-        [HttpPost]
+        [HttpPost ("add")]
         public string AddPerson(Person newPerson) {
             People.Add(newPerson);
             return "Person Added";
+        }
+
+        /// <summary>
+        /// Return person in list with matching id
+        /// </summary>
+        /// <param name="findPerson"></param>
+        /// <returns></returns>
+
+        [HttpPost ("id")]
+        public Person FindPerson([FromBody] Person findPerson) {
+             Person found = null;
+             foreach (Person p in People) {
+                if (p.Id == findPerson.Id) {
+                    found = p;
+                    break;
+                }
+            }
+
+            return found;
         }
 
     }

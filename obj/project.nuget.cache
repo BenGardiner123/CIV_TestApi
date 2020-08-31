@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "IdZGSlk7aO1Lp3nwGm8gLUHGa9Nbnq1AgmAmkVgx0nLvUX6qoV8OJJStphIx7tqbJjOUihLY/aG02w7NxKUMVA==",
+  "dgSpecHash": "VcfPuD+NbCGJRaa9jxzoLFH5Fda16/5gkK/F2XblgzrrGTbJnNxwHbHmobwAHczEHNXskLrGc6tSwX5SHV61jQ==",
   "success": true,
-  "projectFilePath": "/Users/anguyen/Projects/CSharp/TestApi/TestApi.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\User\\Desktop\\CIV_TestApi\\CIV_TestApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
